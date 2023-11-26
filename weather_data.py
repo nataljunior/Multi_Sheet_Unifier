@@ -7,30 +7,20 @@ Original file is located at
     https://colab.research.google.com/drive/1zjg9tvTLq6QuSa1zMD5uFYriLoUNQMnO
 """
 
-pip install requests
-
-import requests
+!pip install pydrive openpyxl
 
 import pandas as pd
 import numpy as np
-import warnings
-warnings.filterwarnings('ignore')
-
 from google.colab import drive
+import openpyxl
+import os
+
+
 drive.mount('/content/drive')
 
-df = pd.read_csv("/content/drive/MyDrive/SIL/weather_data.csv")
-
-df
-
-!pip install pydrive openpyxl
-
-import openpyxl
-
-import os
 os.chdir('/content/drive/MyDrive/SIL/Weather_data/weather_data')
 
-!ls
+!ls # to get the name of all files of your folder
 
 # List of file names
 file_names = [
